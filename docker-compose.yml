@@ -1,0 +1,11 @@
+services:
+  mysql:
+    container_name: 'first_node_api-mysql'
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=first_node_api'
+      - 'MYSQL_PASSWORD=123'
+      - 'MYSQL_ROOT_PASSWORD=123'
+      - 'MYSQL_USER=user'
+    ports:
+      - '3306:3306'
