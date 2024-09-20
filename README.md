@@ -77,5 +77,3 @@ DB_PASSWORD=123
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/arthur-cristo/First-NodeJs-API?tab=MIT-1-ov-file#readme) file for details.
-
----
