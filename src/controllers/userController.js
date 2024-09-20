@@ -50,6 +50,26 @@ const updateUser = async (req, res) => {
     }
 };
 
+const patchUser = async (req, res) => {
+    const id = req.params.id;
+    const {first_name, last_name, email, password} = req.body;
+    try {
+        const user = await User.findByPk(id);
+        if (!user) {
+            res.status(404).json({title: 'User not found', description: `The user of id ${id} was not found.`})
+            return;
+        }
+        if(first_name) user.first_name = first_name;
+        if(last_name) user.last_name = last_name;
+        if(email) user.email = email;
+        if(password) user.password = password;
+        await user.save();
+        res.status(200).json(user);
+    } catch (err) {
+        res.status(500).json({title: 'Failed to update user', description: err.message});
+    }
+};
+
 const deleteUser = async (req, res) => {
     const id = req.params.id;
     try {
@@ -70,5 +90,6 @@ module.exports = {
     findById,
     createUser,
     updateUser,
+    patchUser,
     deleteUser,
 };
