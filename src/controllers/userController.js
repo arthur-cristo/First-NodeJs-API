@@ -1,5 +1,4 @@
 const User = require('../models/userModel');
-const {where} = require("sequelize");
 
 const findAll = async (req, res) => {
     try {
