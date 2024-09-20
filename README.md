@@ -14,8 +14,7 @@ A Node.js API for managing users with CRUD operations, using a MySQL database ru
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/arthur-cristo/First-NodeJs-API.git
    ```
 
 2. **Install dependencies:**
@@ -77,6 +76,6 @@ DB_PASSWORD=123
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]() file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/arthur-cristo/First-NodeJs-API?tab=MIT-1-ov-file#readme) file for details.
 
 ---
